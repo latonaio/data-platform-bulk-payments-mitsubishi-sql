@@ -1,4 +1,4 @@
-CREATE TABLE `data_platform_bulk_payments_mitsubishi_bulk_payment_request_info_data`
+CREATE TABLE `data_platform_payment_requisition_mitsubishi_bulk_payment_request_info_data`
 (
   `Payer`                                int(12) NOT NULL,
   `PayerPaymentDate`                     date NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE `data_platform_bulk_payments_mitsubishi_bulk_payment_request_info_d
 
     PRIMARY KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`),
 
-    CONSTRAINT `DataPlatformBulkPaymentsMitsubishiBulkPaymentRequestInfoData_fk` FOREIGN KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`) REFERENCES `data_platform_payment_requisition_header_data` (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`)
+    CONSTRAINT `DataPlatformPaymentRequisitionMitsubishiBulkPaymentRequestInfoData_fk` FOREIGN KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`) REFERENCES `data_platform_payment_requisition_header_data` (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

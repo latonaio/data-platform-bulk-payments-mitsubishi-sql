@@ -1,4 +1,4 @@
-CREATE TABLE `data_platform_bulk_payments_mitsubishi_bulk_payment_request_detail_info_data`
+CREATE TABLE `data_platform_payment_requisition_mitsubishi_bulk_payment_request_detail_info_data`
 (
   `Payer`                                int(12) NOT NULL,
   `PayerPaymentDate`                     date NOT NULL,
@@ -23,8 +23,8 @@ CREATE TABLE `data_platform_bulk_payments_mitsubishi_bulk_payment_request_detail
 
     PRIMARY KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`, `PayerPaymentRequisitionItem`),
 
-    CONSTRAINT `DataPlatformBulkPaymentsMitsubishiBulkPaymentRequestDetailInfoData01_fk` FOREIGN KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`, `PayerPaymentRequisitionItem`) REFERENCES `data_platform_payment_requisition_item_data` (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`, `PayerPaymentRequisitionItem`),
-    CONSTRAINT `DataPlatformBulkPaymentsMitsubishiBulkPaymentRequestDetailInfoData02_fk` FOREIGN KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`) REFERENCES `data_platform_bulk_payments_mitsubishi_bulk_payment_request_info_data` (`FinInstCountry`, `FinInstNumber`, `InternalFinInstCustomerID`)
+    CONSTRAINT `DataPlatformPaymentRequisitionMitsubishiBulkPaymentRequestDetailInfoData01_fk` FOREIGN KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`, `PayerPaymentRequisitionItem`) REFERENCES `data_platform_payment_requisition_item_data` (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`, `PayerPaymentRequisitionItem`),
+    CONSTRAINT `DataPlatformPaymentRequisitionMitsubishiBulkPaymentRequestDetailInfoData02_fk` FOREIGN KEY (`Payer`, `PayerPaymentDate`, `PayerPaymentRequisitionID`) REFERENCES `data_platform_payment_requisition_mitsubishi_bulk_payment_request_info_data` (`FinInstCountry`, `FinInstNumber`, `InternalFinInstCustomerID`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

@@ -1,4 +1,4 @@
-CREATE TABLE `data_platform_bulk_payments_mitsubishi_create_bulk_payment_data`
+CREATE TABLE `data_platform_payment_requisition_mitsubishi_create_bulk_payment_data`
 (
   `paymentDataName`                              varchar(60) NOT NULL,
   `codeOnlyFlag`                                 varchar(1) NOT NULL,
